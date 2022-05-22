@@ -1,7 +1,7 @@
 import { css } from '@emotion/css';
 
 export const picoStyles = css`
-	/**
+/**
  * Theme: default
  */
 	.pico-styles {
@@ -493,7 +493,7 @@ export const picoStyles = css`
 		--icon-valid: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='rgba(46, 125, 50, 0.999)' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'%3E%3C/polyline%3E%3C/svg%3E");
 	}
 
-	/**
+/**
  * Document
  * Content-box & Responsive typography
  */
@@ -529,7 +529,7 @@ export const picoStyles = css`
 		tab-size: 4;
 	}
 
-	/**
+/**
  * Sectioning
  * Container and responsive spacings for header, main, footer
  */
@@ -580,7 +580,7 @@ export const picoStyles = css`
 		}
 	}
 
-	/**
+/**
  * Section
  * Responsive spacings for section
  */
@@ -588,7 +588,7 @@ export const picoStyles = css`
 		margin-bottom: var(--block-spacing-vertical);
 	}
 
-	/**
+/**
  * Horizontal scroller (<figure>)
  */
 	figure {
@@ -602,7 +602,7 @@ export const picoStyles = css`
 		color: var(--muted-color);
 	}
 
-	/**
+/**
  * Typography
  */
 	b,
@@ -800,7 +800,7 @@ export const picoStyles = css`
 		background-color: var(--primary-focus);
 	}
 
-	/**
+/**
  * Embedded content
  */
 	:where(audio, canvas, iframe, img, svg, video) {
@@ -835,7 +835,7 @@ export const picoStyles = css`
 		overflow: hidden;
 	}
 
-	/**
+/**
  * Button
  */
 	button {
@@ -928,7 +928,7 @@ export const picoStyles = css`
 		pointer-events: none;
 	}
 
-	/**
+/**
  * Form elements
  */
 	input,
@@ -1173,7 +1173,7 @@ export const picoStyles = css`
 		margin-top: calc(var(--spacing) * 0.25);
 	}
 
-	/**
+/**
  * Form elements
  * Checkboxes & Radios
  */
@@ -1295,7 +1295,7 @@ export const picoStyles = css`
 		--border-color: var(--form-element-invalid-border-color);
 	}
 
-	/**
+/**
  * Form elements
  * Alternatives input types (Not Checkboxes & Radios)
  */
@@ -1595,7 +1595,7 @@ export const picoStyles = css`
 		background-position: center right 1.125rem, center left 0.75rem;
 	}
 
-	/**
+/**
  * Table
  */
 	:where(table) {
@@ -1626,7 +1626,7 @@ export const picoStyles = css`
 		background-color: var(--table-row-stripped-background-color);
 	}
 
-	/**
+/**
  * Code
  */
 	pre,
@@ -1694,7 +1694,7 @@ export const picoStyles = css`
 		vertical-align: baseline;
 	}
 
-	/**
+/**
  * Miscs
  */
 	hr {
@@ -1713,7 +1713,7 @@ export const picoStyles = css`
 		display: inline-block;
 	}
 
-	/**
+/**
  * Accordion (<details>)
  */
 	details {
@@ -1787,7 +1787,7 @@ export const picoStyles = css`
 		background-position: left center;
 	}
 
-	/**
+/**
  * Card (<article>)
  */
 	article {
@@ -1815,7 +1815,7 @@ export const picoStyles = css`
 		border-top: var(--border-width) solid var(--card-border-color);
 	}
 
-	/**
+/**
  * Modal (<dialog>)
  */
 	.pico-styles {
@@ -1880,7 +1880,7 @@ export const picoStyles = css`
 		display: none;
 	}
 
-	/**
+/**
  * Nav
  */
 	:where(nav li)::before {
@@ -1951,7 +1951,7 @@ export const picoStyles = css`
 		margin: inherit;
 	}
 
-	/**
+/**
  * Progress
  */
 	progress {
@@ -2022,7 +2022,7 @@ export const picoStyles = css`
 			background-position: -200% 0;
 		}
 	}
-	/**
+/**
  * Dropdown ([role="list"])
  */
 	details[role='list'],
@@ -2195,7 +2195,7 @@ export const picoStyles = css`
 		background-image: var(--icon-chevron);
 	}
 
-	/**
+/**
  * Loading ([aria-busy=true])
  */
 	[aria-busy='true'] {
@@ -2247,7 +2247,7 @@ export const picoStyles = css`
 			transform: rotate(360deg);
 		}
 	}
-	/**
+/**
  * Tooltip ([data-tooltip])
  */
 	[data-tooltip] {
@@ -2362,7 +2362,7 @@ export const picoStyles = css`
 			opacity: 1;
 		}
 	}
-	/**
+/**
  * Accessibility & User interaction
  */
 	[aria-controls] {
@@ -2399,7 +2399,7 @@ export const picoStyles = css`
 		direction: rtl;
 	}
 
-	/**
+/**
 * Reduce Motion Features
 */
 	@media (prefers-reduced-motion: reduce) {

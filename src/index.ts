@@ -1,1 +1,5 @@
-export const test = 'value';
+import { picoStyles } from './picoStyles';
+
+export {
+	picoStyles
+}

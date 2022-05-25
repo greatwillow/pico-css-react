@@ -1,0 +1,10 @@
+# Ignore all files by default
+*
+
+# White list only the required files
+!src/
+!test/
+!package.json
+!package-lock.json
+!tsconfig.json
+!jestconfig.json

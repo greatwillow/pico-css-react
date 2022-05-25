@@ -8,6 +8,9 @@
   ],
   "scripts": {
     "test": "jest --config jestconfig.json",
+    "test:watch": "jest --watchAll --config jestconfig.json",
+    "test-in-docker:dev": "docker-compose build local_test && docker-compose run local_test",
+    "test-in-docker:ci": "docker-compose build ci_test && docker-compose run --rm ci_test",
     "build": "tsc",
     "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
     "lint": "tslint -p tsconfig.json"

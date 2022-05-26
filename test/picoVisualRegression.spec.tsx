@@ -82,7 +82,11 @@ describe('Pico test html sections', () => {
 			)
 
 			const screenshot = await generateImage()
-			expect(screenshot).toMatchImageSnapshot()
+			expect(screenshot).toMatchImageSnapshot({
+				customDiffConfig: {
+					threshold: 0.5
+				}
+			})
 		})
 
 		it('Preview styles have no visual regressions', async () => {
@@ -182,7 +186,11 @@ describe('Pico test html sections', () => {
 				)
 
 				const screenshot = await generateImage()
-				expect(screenshot).toMatchImageSnapshot()
+				expect(screenshot).toMatchImageSnapshot({
+					customDiffConfig: {
+						threshold: 0.5
+					}
+				})
 			})
 
 			it('Preview styles have no visual regressions', async () => {

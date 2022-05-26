@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const Accordians = () => (
+export const Accordions = () => (
 	<section id="accordions" style={{ background: '#333333' }}>
 		<h2>Accordions</h2>
 		<details>

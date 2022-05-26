@@ -6,7 +6,7 @@ import { generateImage } from 'jsdom-screenshot'
 import { render } from '@testing-library/react'
 import { toMatchImageSnapshot } from 'jest-image-snapshot'
 import { setDefaultOptions } from 'jsdom-screenshot'
-import { Accordians } from './components/sections/Accordions'
+import { Accordions } from './components/sections/Accordions'
 import { Article } from './components/sections/Article'
 import { Buttons } from './components/sections/Buttons'
 import { Form } from './components/sections/Form'
@@ -21,7 +21,7 @@ import { LightThemePicoStyles } from './components/LightThemePicoStyles'
 // Docker requires --no-sandbox to be able to run the tests
 setDefaultOptions({
 	launch: { args: ['--no-sandbox'] }
-});
+})
 
 // Make sure jest has enough time to capture the screenshots
 jest.setTimeout(15000)
@@ -33,7 +33,7 @@ describe('Pico test html sections', () => {
 		it('Accordians styles have no visual regressions', async () => {
 			render(
 				<DarkThemePicoStyles>
-					<Accordians />
+					<Accordions />
 				</DarkThemePicoStyles>
 			)
 
@@ -133,7 +133,7 @@ describe('Pico test html sections', () => {
 			it('Accordians styles have no visual regressions', async () => {
 				render(
 					<LightThemePicoStyles>
-						<Accordians />
+						<Accordions />
 					</LightThemePicoStyles>
 				)
 

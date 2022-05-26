@@ -1,16 +1,11 @@
----
-defines-react-components: true
-react-components-namespace: picoExample.sections
----
+import React from 'react'
 
-```jsx:component:Typography
-
-return (
+export const Typography = () => (
 	<section id="typography">
 		<h2>Typography</h2>
 		<p>Aliquam lobortis vitae nibh nec rhoncus. Morbi mattis neque eget efficitur feugiat. Vivamus porta nunc a erat mattis, mattis feugiat turpis pretium. Quisque sed tristique felis.</p>
 
-		{ /* Blockquote */ }
+		{ /* Blockquote */}
 		<blockquote>
 			"Maecenas vehicula metus tellus, vitae congue turpis hendrerit non. Nam at dui sit amet ipsum cursus ornare."
 			<footer>
@@ -18,7 +13,7 @@ return (
 			</footer>
 		</blockquote>
 
-		{ /* Lists */ }
+		{ /* Lists */}
 		<h3>Lists</h3>
 		<ul>
 			<li>Aliquam lobortis lacus eu libero ornare facilisis.</li>
@@ -27,41 +22,41 @@ return (
 			<li>Proin ultricies turpis et volutpat vehicula.</li>
 		</ul>
 
-		{ /* Inline text elements */ }
-        <h3>Inline text elements</h3>
-        <figure>
+		{ /* Inline text elements */}
+		<h3>Inline text elements</h3>
+		<figure>
 			<table>
 				<tbody>
-				<tr>
-					<td><a href="#" onclick="event.preventDefault()">Link</a></td>
-					<td><strong>Bold</strong></td>
-					<td><em>Italic</em></td>
-				</tr>
-				<tr>
-					<td><u>Underline</u></td>
-					<td><del>Deleted</del></td>
-					<td><ins>Inserted</ins></td>
-				</tr>
-				<tr>
-					<td><s>Strikethrough</s></td>
-					<td><small>Small </small></td>
-					<td><abbr title="Abbreviation" data-tooltip="Abbreviation">Abbr.</abbr></td>
-				</tr>
-				<tr>
-					<td>Text <sub>Sub</sub></td>
-					<td>Text <sup>Sup</sup></td>
-					<td><kbd>Kbd</kbd></td>
-				</tr>
-				<tr>
-					<td><mark>Highlighted</mark></td>
-					<td>&nbsp;</td>
-					<td>&nbsp;</td>
-				</tr>
+					<tr>
+						<td><a href="#" onClick={(event) => event.preventDefault()}>Link</a></td>
+						<td><strong>Bold</strong></td>
+						<td><em>Italic</em></td>
+					</tr>
+					<tr>
+						<td><u>Underline</u></td>
+						<td><del>Deleted</del></td>
+						<td><ins>Inserted</ins></td>
+					</tr>
+					<tr>
+						<td><s>Strikethrough</s></td>
+						<td><small>Small </small></td>
+						<td><abbr title="Abbreviation" data-tooltip="Abbreviation">Abbr.</abbr></td>
+					</tr>
+					<tr>
+						<td>Text <sub>Sub</sub></td>
+						<td>Text <sup>Sup</sup></td>
+						<td><kbd>Kbd</kbd></td>
+					</tr>
+					<tr>
+						<td><mark>Highlighted</mark></td>
+						<td>&nbsp;</td>
+						<td>&nbsp;</td>
+					</tr>
 				</tbody>
 			</table>
-        </figure>
-		
-		{ /* Headings */ }
+		</figure>
+
+		{ /* Headings */}
 		<h3>Heading 3</h3>
 
 		<p>Integer bibendum malesuada libero vel eleifend. Fusce iaculis turpis ipsum, at efficitur sem scelerisque vel. Aliquam auctor diam ut purus cursus fringilla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
@@ -78,7 +73,7 @@ return (
 
 		<p>Ut sed quam non mauris placerat consequat vitae id risus. Vestibulum tincidunt nulla ut tortor posuere, vitae malesuada tortor molestie. Sed nec interdum dolor. Vestibulum id auctor nisi, a efficitur sem. Aliquam sollicitudin efficitur turpis, sollicitudin hendrerit ligula semper id. Nunc risus felis, egestas eu tristique eget, convallis in velit.</p>
 
-		{ /* Medias */ }
+		{ /* Medias */}
 		<figure>
 			<img src="[https://source.unsplash.com/a562ZEFKW8I/2000x1000](https://source.unsplash.com/a562ZEFKW8I/2000x1000)" alt="Minimal landscape" />
 			<figcaption>Image from <a href="[https://unsplash.com](https://unsplash.com/)">unsplash.com</a></figcaption>
@@ -86,5 +81,3 @@ return (
 
 	</section>
 )
-
-```

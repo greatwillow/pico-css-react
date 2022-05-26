@@ -1,16 +1,9 @@
----
-defines-react-components: true
-react-components-namespace: picoExample.sections
----
+import React from 'react'
 
-```jsx:component:Loading
-
-return (
+export const Loading = () => (
     <section id="loading">
         <h2>Loading</h2>
         <article aria-busy="true"></article>
         <button aria-busy="true">Please wait…</button>
     </section>
 )
-
-```

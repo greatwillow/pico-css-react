@@ -16,9 +16,9 @@ export const Form = () => (
 
 			{ /* Select */}
 			<label htmlFor="select">Select</label>
-			<select id="select" name="select" required>
-				<option value="" selected>Select…</option>
-				<option>…</option>
+			<select id="select" name="select" defaultValue="1" required>
+				<option value="1">Select…</option>
+				<option value="2">…</option>
 			</select>
 
 			{ /* File Browser */}
@@ -28,7 +28,7 @@ export const Form = () => (
 
 			{ /* Range Slider Control */}
 			<label htmlFor="range">Range slider
-				<input type="range" min="0" max="100" value="50" id="range" name="range" />
+				<input type="range" min="0" max="100" defaultValue="50" id="range" name="range" />
 			</label>
 
 			{ /* Valid */}
@@ -61,14 +61,14 @@ export const Form = () => (
 
 			{ /* Color */}
 			<label htmlFor="color">Color
-				<input type="color" id="color" name="color" value="#0eaaaa" />
+				<input type="color" id="color" name="color" defaultValue="#0eaaaa" />
 			</label>
 
 			{ /* Checkboxes */}
 			<fieldset>
 				<legend><strong>Checkboxes</strong></legend>
 				<label htmlFor="checkbox-1">
-					<input type="checkbox" id="checkbox-1" name="checkbox-1" checked />
+					<input type="checkbox" id="checkbox-1" name="checkbox-1" defaultChecked />
 					Checkbox
 				</label>
 				<label htmlFor="checkbox-2">
@@ -81,7 +81,7 @@ export const Form = () => (
 			<fieldset>
 				<legend><strong>Radio buttons</strong></legend>
 				<label htmlFor="radio-1">
-					<input type="radio" id="radio-1" name="radio" value="radio-1" checked />
+					<input type="radio" id="radio-1" name="radio" value="radio-1" defaultChecked />
 					Radio button
 				</label>
 				<label htmlFor="radio-2">
@@ -94,7 +94,7 @@ export const Form = () => (
 			<fieldset>
 				<legend><strong>Switches</strong></legend>
 				<label htmlFor="switch-1">
-					<input type="checkbox" id="switch-1" name="switch-1" role="switch" checked />
+					<input type="checkbox" id="switch-1" name="switch-1" role="switch" defaultChecked />
 					Switch
 				</label>
 				<label htmlFor="switch-2">

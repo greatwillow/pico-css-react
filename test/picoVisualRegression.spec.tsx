@@ -1,7 +1,7 @@
 /**
  * @jest-environment jsdom
  */
-import Reactn from 'react'
+import React from 'react'
 import { generateImage } from 'jsdom-screenshot'
 import { render } from '@testing-library/react'
 import { toMatchImageSnapshot } from 'jest-image-snapshot'
@@ -24,7 +24,7 @@ setDefaultOptions({
 });
 
 // Make sure jest has enough time to capture the screenshots
-jest.setTimeout(20000);
+jest.setTimeout(15000)
 
 expect.extend({ toMatchImageSnapshot })
 

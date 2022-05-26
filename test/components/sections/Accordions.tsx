@@ -1,7 +1,7 @@
 import React from 'react'
 
 export const Accordians = () => (
-	<section id="accordions">
+	<section id="accordions" style={{ background: '#333333' }}>
 		<h2>Accordions</h2>
 		<details>
 			<summary>Accordion 1</summary>

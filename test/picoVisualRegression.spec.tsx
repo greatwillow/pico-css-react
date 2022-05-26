@@ -1,21 +1,22 @@
 /**
  * @jest-environment jsdom
  */
-import React from 'react'
-import { PicoStylesComponent } from '../src/index'
+import Reactn from 'react'
 import { generateImage } from 'jsdom-screenshot'
 import { render } from '@testing-library/react'
 import { toMatchImageSnapshot } from 'jest-image-snapshot'
 import { setDefaultOptions } from 'jsdom-screenshot'
-import { Accordians } from './sections/Accordions'
-import { Article } from './sections/Article'
-import { Buttons } from './sections/Buttons'
-import { Form } from './sections/Form'
-import { Loading } from './sections/Loading'
-import { Preview } from './sections/Preview'
-import { Progress } from './sections/Progress'
-import { Tables } from './sections/Tables'
-import { Typography } from './sections/Typography'
+import { Accordians } from './components/sections/Accordions'
+import { Article } from './components/sections/Article'
+import { Buttons } from './components/sections/Buttons'
+import { Form } from './components/sections/Form'
+import { Loading } from './components/sections/Loading'
+import { Preview } from './components/sections/Preview'
+import { Progress } from './components/sections/Progress'
+import { Tables } from './components/sections/Tables'
+import { Typography } from './components/sections/Typography'
+import { DarkThemePicoStyles } from './components/DarkThemePicoStyles'
+import { LightThemePicoStyles } from './components/LightThemePicoStyles'
 
 // Docker requires --no-sandbox to be able to run the tests
 setDefaultOptions({
@@ -23,107 +24,209 @@ setDefaultOptions({
 });
 
 // Make sure jest has enough time to capture the screenshots
-jest.setTimeout(15000);
+jest.setTimeout(20000);
 
 expect.extend({ toMatchImageSnapshot })
 
 describe('Pico test html sections', () => {
-	it('Accordians styles have no visual regressions', async () => {
-		render(
-			<PicoStylesComponent>
-				<Accordians />
-			</PicoStylesComponent>
-		)
+	describe('For dark theme', () => {
+		it('Accordians styles have no visual regressions', async () => {
+			render(
+				<DarkThemePicoStyles>
+					<Accordians />
+				</DarkThemePicoStyles>
+			)
 
-		const screenshot = await generateImage()
-		expect(screenshot).toMatchImageSnapshot()
-	})
+			const screenshot = await generateImage()
+			expect(screenshot).toMatchImageSnapshot()
+		})
 
-	it('Article styles have no visual regressions', async () => {
-		render(
-			<PicoStylesComponent>
-				<Article />
-			</PicoStylesComponent>
-		)
+		it('Article styles have no visual regressions', async () => {
+			render(
+				<DarkThemePicoStyles>
+					<Article />
+				</DarkThemePicoStyles>
+			)
 
-		const screenshot = await generateImage()
-		expect(screenshot).toMatchImageSnapshot()
-	})
+			const screenshot = await generateImage()
+			expect(screenshot).toMatchImageSnapshot()
+		})
 
-	it('Buttons styles have no visual regressions', async () => {
-		render(
-			<PicoStylesComponent>
-				<Buttons />
-			</PicoStylesComponent>
-		)
+		it('Buttons styles have no visual regressions', async () => {
+			render(
+				<DarkThemePicoStyles>
+					<Buttons />
+				</DarkThemePicoStyles>
+			)
 
-		const screenshot = await generateImage()
-		expect(screenshot).toMatchImageSnapshot()
-	})
+			const screenshot = await generateImage()
+			expect(screenshot).toMatchImageSnapshot()
+		})
 
-	it('Form styles have no visual regressions', async () => {
-		render(
-			<PicoStylesComponent>
-				<Form />
-			</PicoStylesComponent>
-		)
+		it('Form styles have no visual regressions', async () => {
+			render(
+				<DarkThemePicoStyles>
+					<Form />
+				</DarkThemePicoStyles>
+			)
 
-		const screenshot = await generateImage()
-		expect(screenshot).toMatchImageSnapshot()
-	})
+			const screenshot = await generateImage()
+			expect(screenshot).toMatchImageSnapshot()
+		})
 
-	it('Loading styles have no visual regressions', async () => {
-		render(
-			<PicoStylesComponent>
-				<Loading />
-			</PicoStylesComponent>
-		)
+		it('Loading styles have no visual regressions', async () => {
+			render(
+				<DarkThemePicoStyles>
+					<Loading />
+				</DarkThemePicoStyles>
+			)
 
-		const screenshot = await generateImage()
-		expect(screenshot).toMatchImageSnapshot()
-	})
+			const screenshot = await generateImage()
+			expect(screenshot).toMatchImageSnapshot()
+		})
 
-	it('Preview styles have no visual regressions', async () => {
-		render(
-			<PicoStylesComponent>
-				<Preview />
-			</PicoStylesComponent>
-		)
+		it('Preview styles have no visual regressions', async () => {
+			render(
+				<DarkThemePicoStyles>
+					<Preview />
+				</DarkThemePicoStyles>
+			)
 
-		const screenshot = await generateImage()
-		expect(screenshot).toMatchImageSnapshot()
-	})
+			const screenshot = await generateImage()
+			expect(screenshot).toMatchImageSnapshot()
+		})
 
-	it('Progress styles have no visual regressions', async () => {
-		render(
-			<PicoStylesComponent>
-				<Progress />
-			</PicoStylesComponent>
-		)
+		it('Progress styles have no visual regressions', async () => {
+			render(
+				<DarkThemePicoStyles>
+					<Progress />
+				</DarkThemePicoStyles>
+			)
 
-		const screenshot = await generateImage()
-		expect(screenshot).toMatchImageSnapshot()
-	})
+			const screenshot = await generateImage()
+			expect(screenshot).toMatchImageSnapshot()
+		})
 
-	it('Tables styles have no visual regressions', async () => {
-		render(
-			<PicoStylesComponent>
-				<Tables />
-			</PicoStylesComponent>
-		)
+		it('Tables styles have no visual regressions', async () => {
+			render(
+				<DarkThemePicoStyles>
+					<Tables />
+				</DarkThemePicoStyles>
+			)
 
-		const screenshot = await generateImage()
-		expect(screenshot).toMatchImageSnapshot()
-	})
+			const screenshot = await generateImage()
+			expect(screenshot).toMatchImageSnapshot()
+		})
 
-	it('Typography styles have no visual regressions', async () => {
-		render(
-			<PicoStylesComponent>
-				<Typography />
-			</PicoStylesComponent>
-		)
+		it('Typography styles have no visual regressions', async () => {
+			render(
+				<DarkThemePicoStyles>
+					<Typography />
+				</DarkThemePicoStyles>
+			)
 
-		const screenshot = await generateImage()
-		expect(screenshot).toMatchImageSnapshot()
-	})
+			const screenshot = await generateImage()
+			expect(screenshot).toMatchImageSnapshot()
+		})
+	}),
+		describe('For light theme', () => {
+			it('Accordians styles have no visual regressions', async () => {
+				render(
+					<LightThemePicoStyles>
+						<Accordians />
+					</LightThemePicoStyles>
+				)
+
+				const screenshot = await generateImage()
+				expect(screenshot).toMatchImageSnapshot()
+			})
+
+			it('Article styles have no visual regressions', async () => {
+				render(
+					<LightThemePicoStyles>
+						<Article />
+					</LightThemePicoStyles>
+				)
+
+				const screenshot = await generateImage()
+				expect(screenshot).toMatchImageSnapshot()
+			})
+
+			it('Buttons styles have no visual regressions', async () => {
+				render(
+					<LightThemePicoStyles>
+						<Buttons />
+					</LightThemePicoStyles>
+				)
+
+				const screenshot = await generateImage()
+				expect(screenshot).toMatchImageSnapshot()
+			})
+
+			it('Form styles have no visual regressions', async () => {
+				render(
+					<LightThemePicoStyles>
+						<Form />
+					</LightThemePicoStyles>
+				)
+
+				const screenshot = await generateImage()
+				expect(screenshot).toMatchImageSnapshot()
+			})
+
+			it('Loading styles have no visual regressions', async () => {
+				render(
+					<LightThemePicoStyles>
+						<Loading />
+					</LightThemePicoStyles>
+				)
+
+				const screenshot = await generateImage()
+				expect(screenshot).toMatchImageSnapshot()
+			})
+
+			it('Preview styles have no visual regressions', async () => {
+				render(
+					<LightThemePicoStyles>
+						<Preview />
+					</LightThemePicoStyles>
+				)
+
+				const screenshot = await generateImage()
+				expect(screenshot).toMatchImageSnapshot()
+			})
+
+			it('Progress styles have no visual regressions', async () => {
+				render(
+					<LightThemePicoStyles>
+						<Progress />
+					</LightThemePicoStyles>
+				)
+
+				const screenshot = await generateImage()
+				expect(screenshot).toMatchImageSnapshot()
+			})
+
+			it('Tables styles have no visual regressions', async () => {
+				render(
+					<LightThemePicoStyles>
+						<Tables />
+					</LightThemePicoStyles>
+				)
+
+				const screenshot = await generateImage()
+				expect(screenshot).toMatchImageSnapshot()
+			})
+
+			it('Typography styles have no visual regressions', async () => {
+				render(
+					<LightThemePicoStyles>
+						<Typography />
+					</LightThemePicoStyles>
+				)
+
+				const screenshot = await generateImage()
+				expect(screenshot).toMatchImageSnapshot()
+			})
+		})
 })

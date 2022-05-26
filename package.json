@@ -7,7 +7,10 @@
     "lib/**/*"
   ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest --config jestconfig.json",
+    "test:watch": "jest --watchAll --config jestconfig.json",
+    "test-in-docker:dev": "docker-compose build local_test && docker-compose run local_test",
+    "test-in-docker:ci": "docker-compose build ci_test && docker-compose run --rm ci_test",
     "build": "tsc",
     "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
     "lint": "tslint -p tsconfig.json"
@@ -24,8 +27,18 @@
   },
   "homepage": "https://github.com/greatwillow/pico-css-react#readme",
   "devDependencies": {
+    "@testing-library/react": "^13.2.0",
+    "@types/jest": "^27.5.1",
+    "@types/jest-image-snapshot": "^4.3.1",
+    "@types/jsdom-screenshot": "^3.2.1",
     "@types/react": "^18.0.9",
+    "jest": "^27.0.0",
+    "jest-image-snapshot": "^4.5.1",
+    "jest-transform-css": "^4.0.1",
+    "jest-transform-file": "^1.1.1",
+    "jsdom-screenshot": "^4.0.0",
     "prettier": "^2.6.2",
+    "ts-jest": "^27.0.0",
     "tslint": "^6.1.3",
     "tslint-config-prettier": "^1.18.0",
     "typescript": "^4.6.4"

@@ -84,7 +84,7 @@ describe('Pico test html sections', () => {
 			const screenshot = await generateImage()
 			expect(screenshot).toMatchImageSnapshot({
 				customDiffConfig: {
-					threshold: 0.001
+					threshold: 0.5
 				}
 			})
 		})

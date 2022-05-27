@@ -1,4 +1,4 @@
-FROM node:16.3.0-alpine
+FROM buildkite/puppeteer:latest
 
 RUN mkdir /app
 WORKDIR /app

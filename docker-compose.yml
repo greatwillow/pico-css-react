@@ -9,10 +9,9 @@ services:
     volumes:
       - './src:/app/src'
 
-  # What's there is there. No second chances in CI.
   ci_test:
     build:
       context: .
     environment:
       - CI=true
-    command: npm run test
+    command: npm ci & npm run test

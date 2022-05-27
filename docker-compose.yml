@@ -14,4 +14,4 @@ services:
       context: .
     environment:
       - CI=true
-    command: npm ci & npm run test
+    command: npm run test

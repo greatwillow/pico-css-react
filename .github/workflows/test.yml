@@ -13,4 +13,4 @@ jobs:
         if: failure()
         with:
           name: visual-regression-report
-          path: test/__image_snapshots__/*
+          path: test/__image_snapshots__

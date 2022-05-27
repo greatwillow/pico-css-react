@@ -1,0 +1,16 @@
+name: CI
+on: [push]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v1
+      - name: Run the containerized tests
+        run: npm run test-in-docker:ci
+      - name: Archive visual regression failures
+        uses: actions/upload-artifact@v1
+        if: failure()
+        with:
+          name: visual-regression-report
+          path: test/__image_snapshots__/__diff_output__

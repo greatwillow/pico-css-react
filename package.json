@@ -12,7 +12,7 @@
     "test-in-docker:dev": "docker-compose build local_test && docker-compose run local_test",
     "test-in-docker:ci": "docker-compose build ci_test && docker-compose run --rm ci_test",
     "build": "tsc",
-    "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
+    "format": "prettier --write \"src/**/*.ts\"",
     "lint": "tslint -p tsconfig.json",
     "prepare": "npm run build",
     "prepublishOnly": "npm run test-in-docker:dev && npm run lint",

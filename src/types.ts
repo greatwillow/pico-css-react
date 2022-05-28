@@ -1,1 +1,1 @@
-export type PicoTheme = 'light' | 'dark'
+export type PicoTheme = 'light' | 'dark';

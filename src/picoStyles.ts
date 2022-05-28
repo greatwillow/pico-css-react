@@ -928,9 +928,9 @@ export const picoStyles = css`
 		pointer-events: none;
 	}
 
-/**
- * Form elements
- */
+	/**
+	* Form elements
+	*/
 	input,
 	optgroup,
 	select,
@@ -2022,6 +2022,7 @@ export const picoStyles = css`
 			background-position: -200% 0;
 		}
 	}
+
 	/**
 	* Dropdown ([role="list"])
 	*/
@@ -2247,6 +2248,7 @@ export const picoStyles = css`
 			transform: rotate(360deg);
 		}
 	}
+
 	/**
 	* Tooltip ([data-tooltip])
 	*/
@@ -2362,6 +2364,7 @@ export const picoStyles = css`
 			opacity: 1;
 		}
 	}
+	
 	/**
 	* Accessibility & User interaction
 	*/

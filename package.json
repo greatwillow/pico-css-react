@@ -1,6 +1,6 @@
 {
   "name": "pico-css-react",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Simple beautiful semantic html components brought to React",
   "main": "index.js",
   "files": [
@@ -12,8 +12,13 @@
     "test-in-docker:dev": "docker-compose build local_test && docker-compose run local_test",
     "test-in-docker:ci": "docker-compose build ci_test && docker-compose run --rm ci_test",
     "build": "tsc",
-    "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
-    "lint": "tslint -p tsconfig.json"
+    "format": "prettier --write \"src/**/*.ts\"",
+    "lint": "tslint -p tsconfig.json",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm run test-in-docker:dev && npm run lint",
+    "preversion": "npm run lint",
+    "version": "npm run format && git add -A src",
+    "postversion": "git push && git push --tags"
   },
   "repository": {
     "type": "git",

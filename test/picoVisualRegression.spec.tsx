@@ -4,8 +4,6 @@
 import React from 'react'
 import { generateImage } from 'jsdom-screenshot'
 import { render } from '@testing-library/react'
-import { toMatchImageSnapshot } from 'jest-image-snapshot'
-import { setDefaultOptions } from 'jsdom-screenshot'
 import { Accordions } from './components/sections/Accordions'
 import { Article } from './components/sections/Article'
 import { Buttons } from './components/sections/Buttons'
@@ -17,16 +15,6 @@ import { Tables } from './components/sections/Tables'
 import { Typography } from './components/sections/Typography'
 import { DarkThemePicoStyles } from './components/DarkThemePicoStyles'
 import { LightThemePicoStyles } from './components/LightThemePicoStyles'
-
-// Docker requires --no-sandbox to be able to run the tests
-setDefaultOptions({
-	launch: { args: ['--no-sandbox'] }
-})
-
-// Make sure jest has enough time to capture the screenshots
-jest.setTimeout(15000)
-
-expect.extend({ toMatchImageSnapshot })
 
 describe('Pico test html sections', () => {
 	describe('For dark theme', () => {

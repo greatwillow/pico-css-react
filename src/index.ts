@@ -1,7 +1,4 @@
 import { picoStyles } from './picoStyles';
-import { Main as PicoStylesComponent } from './main'
+import { Main as PicoStylesComponent } from './main';
 
-export {
-	picoStyles,
-	PicoStylesComponent
-}
+export { picoStyles, PicoStylesComponent };

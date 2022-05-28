@@ -1,7 +1,9 @@
 {
 	"verbose": true,
 	"transform": {
-		"^.+\\.(t|j)sx?$": "ts-jest"
+		"^.+\\.(t|j)sx?$": "ts-jest",
+		"^.+\\.css$": "jest-transform-css",
+		"\\.(jpg|jpeg|png|gif|webp|svg)$": "jest-transform-file"
 	},
 	"testRegex": "(/test/.*|(\\.|/)(test|spec))\\.tsx?$",
 	"moduleFileExtensions": [

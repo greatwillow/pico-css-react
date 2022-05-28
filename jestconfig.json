@@ -6,6 +6,9 @@
 		"\\.(jpg|jpeg|png|gif|webp|svg)$": "jest-transform-file"
 	},
 	"testRegex": "(/test/.*|(\\.|/)(test|spec))\\.tsx?$",
+	"setupFilesAfterEnv": [
+		"./setupTests.js"
+	],
 	"moduleFileExtensions": [
 		"ts",
 		"tsx",

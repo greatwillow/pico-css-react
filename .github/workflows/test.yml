@@ -8,6 +8,8 @@ jobs:
       - uses: actions/setup-node@v1
       - name: Run the containerized tests
         run: npm run test-in-docker:ci
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
       - name: Archive visual regression failures
         uses: actions/upload-artifact@v1
         if: failure()

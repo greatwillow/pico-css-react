@@ -2364,7 +2364,7 @@ export const picoStyles = css`
 			opacity: 1;
 		}
 	}
-	
+
 	/**
 	* Accessibility & User interaction
 	*/

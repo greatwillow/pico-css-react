@@ -16,7 +16,8 @@
     "lint": "npx eslint src/**/*.ts src/**/*.tsx test/**/*.ts test/**/*.tsx",
     "lint:fix": "npx eslint src/**/*.ts src/**/*.tsx test/**/*.ts test/**/*.tsx --fix",
     "prepare": "npm run build",
-    "prepublishOnly": "npm run && npm run lint",
+    "prepublishOnly": "npm run lint && npm run build && cp -r ./lib/* . && rm -rf ./lib",
+    "postpublish": "git clean -fd",
     "preversion": "npm run lint",
     "version": "git add -A src",
     "postversion": "git push && git push --tags"

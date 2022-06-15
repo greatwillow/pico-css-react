@@ -11,7 +11,8 @@
     "test:watch": "jest --watchAll --config jestconfig.json",
     "test-in-docker:dev": "docker-compose build local_test && docker-compose run local_test",
     "test-in-docker:ci": "docker-compose build ci_test && docker-compose run --rm ci_test",
-    "build": "tsc",
+    "build": "npm run process-files && tsc",
+    "process-files": "cd src/ && npx ts-node -e \"require('./process-pico-files.ts').processFiles()\" && cd ..",
     "format": "prettier --write \"src/**/*.ts\"",
     "lint": "tslint -p tsconfig.json",
     "prepare": "npm run build",
@@ -50,6 +51,7 @@
   },
   "dependencies": {
     "@emotion/css": "^11.9.0",
+    "pico-scoped": "^1.0.2",
     "react": "^18.1.0",
     "react-dom": "^18.1.0"
   }

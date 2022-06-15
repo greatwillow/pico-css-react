@@ -1,4 +1,11 @@
-import { picoStyles } from './picoStyles';
-import { Main as PicoStylesComponent } from './main';
+import Pico from './components/pico';
+import PicoClassless from './components/pico-classless';
+import PicoFluidClassless from './components/pico-fluid-classless';
+import PicoSlim from './components/pico-slim';
 
-export { picoStyles, PicoStylesComponent };
+export { 
+	Pico,
+	PicoClassless,
+	PicoFluidClassless,
+	PicoSlim
+}

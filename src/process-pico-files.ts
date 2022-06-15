@@ -29,9 +29,9 @@ function createScopedPicoFile(
     const processedFileName = createProcessedFileName(originalFileName)
     const processedFileAndDirectory = `${outputDirectory}/${processedFileName}`
 
-    if (!fs.existsSync(outputDirectory)){
-        fs.mkdirSync(outputDirectory);
-    }
+    if(!fs.existsSync(outputDirectory))
+        fs.mkdirSync(outputDirectory)
+    
 
     fs.writeFileSync(
         processedFileAndDirectory,
@@ -39,7 +39,7 @@ function createScopedPicoFile(
         handleWriteFileError
     )
 
-    return;
+    return
 }
 
 function createScopedPicoFiles(

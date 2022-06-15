@@ -4,6 +4,9 @@
   "description": "Simple beautiful semantic html components brought to React",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
+  "files": [
+    "lib/**/*"
+  ],
   "scripts": {
     "test": "jest --config jestconfig.json",
     "test:watch": "jest --watchAll --config jestconfig.json",

@@ -20,10 +20,11 @@ describe('createScopedPicoFiles', () => {
     test('should correctly process pico css files', () => {
 	
         return Promise.all(createScopedPicoFiles(mockInputDirectory, mockOutputDirectory)).then(() => {
-            const actualOutputCss = fs.readFileSync(`${mockOutputDirectory}/${mockOutputCssFileName}`, 'utf8')
-            const expectedOutputCss = fs.readFileSync(`${expectedOutputCssDirectory}/${expectedOutputCssFileName}`, 'utf8')
+            const actualOutput = fs.readFileSync(`${mockOutputDirectory}/${mockOutputCssFileName}`, 'utf8')
+            const originalCss = fs.readFileSync(`${mockInputDirectory}/${mockInputCssFileName}`, 'utf8')
+            const expectedOutput = `import { css } from '@emotion/css'\n\nexport default css\`\n${originalCss}\n\``
 
-            expect(actualOutputCss).toEqual(expectedOutputCss)	
+            expect(actualOutput).toEqual(expectedOutput)	
         })
     })
 })	

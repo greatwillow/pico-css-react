@@ -1,10 +1,10 @@
 import React from 'react'
-import { PicoStylesComponent } from '../../src'
+import { Pico } from '../../src'
 
 export const LightThemePicoStyles = ({ children }: React.PropsWithChildren<unknown>) => (
 	<div style={{ background: '#ffffff', padding: '20px' }} >
-		<PicoStylesComponent theme='light'>
+		<Pico theme='light'>
 			{children}
-		</PicoStylesComponent>
+		</Pico>
 	</div>
 )

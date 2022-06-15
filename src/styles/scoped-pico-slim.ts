@@ -1161,4 +1161,5 @@ export default css`
 
 .pico-styles [dir=rtl] {
   direction: rtl;
-}` 
+}
+`

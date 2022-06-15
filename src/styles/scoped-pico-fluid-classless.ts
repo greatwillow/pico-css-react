@@ -2199,4 +2199,5 @@ export default css`
     transition-delay: 0s !important;
     transition-duration: 0s !important;
   }
-}` 
+}
+`
